@@ -6,13 +6,13 @@
   <title>Loyal SMP Supporter</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
-    /* Reset & Font */
+    /* Reset & Fonts */
     * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Inter', sans-serif; }
     body { background: #000; color: #fff; display: flex; justify-content: center; align-items: center; height: 100vh; }
 
     /* Container */
     .container {
-      background: #fff;        /* White background */
+      background: #fff;        /* White container background */
       color: #000;             /* Black text */
       padding: 40px;
       border-radius: 20px;
@@ -35,6 +35,63 @@
       margin-bottom: 20px;
       outline: none;
       font-size: 14px;
+      background: #fff;
+      color: #000;
+    }
+
+    button {
+      width: 100%;
+      padding: 15px;
+      border: 1px solid #000;
+      border-radius: 12px;
+      background: #000;
+      color: #fff;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.3s ease, color 0.3s ease;
+    }
+    button:hover { background: #fff; color: #000; }
+
+    .note {
+      margin-top: 20px;
+      font-size: 12px;
+      color: #555;
+    }
+
+    /* Responsive */
+    @media (max-width: 500px) {
+      .container { padding: 30px; }
+      h1 { font-size: 24px; }
+      input { padding: 10px; }
+      button { padding: 12px; font-size: 15px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Loyal SMP Supporter</h1>
+    <p>Enter your Discord username below to proceed to payment.</p>
+
+    <input type="text" id="discord" placeholder="Discord username">
+    <button onclick="payNow()">Pay Now</button>
+
+    <div class="note">After payment, your Discord role will be assigned automatically.</div>
+  </div>
+
+  <script>
+    function payNow() {
+      const username = document.getElementById("discord").value;
+      if (!username) {
+        alert("Please enter your Discord username!");
+        return;
+      }
+      // Redirect to your backend
+      window.location.href = "https://discord-bot-helper--loyalmoderatorb.replit.app/create-checkout?user=" + encodeURIComponent(username);
+    }
+  </script>
+</body>
+</html>      font-size: 14px;
       background: #fff;
       color: #000;
     }
