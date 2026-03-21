@@ -1,9 +1,17 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>My Site</title>
-</head>
-<body>
-  <h1>Hello!</h1>
-</body>
-</html>
+<input type="text" id="discord" placeholder="Enter your Discord username">
+
+<button onclick="payNow()">Pay</button>
+
+<script>
+function payNow() {
+  const username = document.getElementById("discord").value;
+
+    if (!username) {
+        alert("Enter your Discord username!");
+            return;
+              }
+
+                // Send user to your backend
+                  window.location.href = "https://discord-bot-helper--loyalmoderatorb.replit.app/create-checkout?user=" + encodeURIComponent(username);
+                  }
+                  </script>
