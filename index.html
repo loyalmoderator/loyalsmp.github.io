@@ -1,17 +1,91 @@
-<input type="text" id="discord" placeholder="Enter your Discord username">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Premium Discord Access</title>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+          <style>
+              /* Reset & Fonts */
+                  * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Inter', sans-serif; }
+                      body { background: linear-gradient(135deg, #0f172a, #1e293b); color: white; display: flex; justify-content: center; align-items: center; height: 100vh; }
 
-<button onclick="payNow()">Pay</button>
+                          /* Container */
+                              .container {
+                                    background: #1e293b;
+                                          padding: 40px;
+                                                border-radius: 20px;
+                                                      width: 90%;
+                                                            max-width: 450px;
+                                                                  text-align: center;
+                                                                        box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+                                                                              transition: transform 0.3s ease;
+                                                                                  }
+                                                                                      .container:hover { transform: translateY(-5px); }
 
-<script>
-function payNow() {
-  const username = document.getElementById("discord").value;
+                                                                                          h1 { font-size: 28px; margin-bottom: 15px; color: #22c55e; }
+                                                                                              p { font-size: 14px; color: #cbd5f5; margin-bottom: 25px; }
 
-    if (!username) {
-        alert("Enter your Discord username!");
-            return;
-              }
+                                                                                                  input {
+                                                                                                        width: 100%;
+                                                                                                              padding: 12px 15px;
+                                                                                                                    border-radius: 10px;
+                                                                                                                          border: none;
+                                                                                                                                margin-bottom: 20px;
+                                                                                                                                      outline: none;
+                                                                                                                                            font-size: 14px;
+                                                                                                                                                }
 
-                // Send user to your backend
-                  window.location.href = "https://discord-bot-helper--loyalmoderatorb.replit.app/create-checkout?user=" + encodeURIComponent(username);
-                  }
-                  </script>
+                                                                                                                                                    button {
+                                                                                                                                                          width: 100%;
+                                                                                                                                                                padding: 15px;
+                                                                                                                                                                      border: none;
+                                                                                                                                                                            border-radius: 12px;
+                                                                                                                                                                                  background: #22c55e;
+                                                                                                                                                                                        color: white;
+                                                                                                                                                                                              font-size: 16px;
+                                                                                                                                                                                                    font-weight: 600;
+                                                                                                                                                                                                          cursor: pointer;
+                                                                                                                                                                                                                transition: background 0.3s ease;
+                                                                                                                                                                                                                    }
+                                                                                                                                                                                                                        button:hover { background: #16a34a; }
+
+                                                                                                                                                                                                                            .note {
+                                                                                                                                                                                                                                  margin-top: 20px;
+                                                                                                                                                                                                                                        font-size: 12px;
+                                                                                                                                                                                                                                              color: #94a3b8;
+                                                                                                                                                                                                                                                  }
+
+                                                                                                                                                                                                                                                      /* Responsive */
+                                                                                                                                                                                                                                                          @media (max-width: 500px) {
+                                                                                                                                                                                                                                                                .container { padding: 30px; }
+                                                                                                                                                                                                                                                                      h1 { font-size: 24px; }
+                                                                                                                                                                                                                                                                            input { padding: 10px; }
+                                                                                                                                                                                                                                                                                  button { padding: 12px; font-size: 15px; }
+                                                                                                                                                                                                                                                                                      }
+                                                                                                                                                                                                                                                                                        </style>
+                                                                                                                                                                                                                                                                                        </head>
+                                                                                                                                                                                                                                                                                        <body>
+                                                                                                                                                                                                                                                                                          <div class="container">
+                                                                                                                                                                                                                                                                                              <h1>🔥 Premium Discord Access</h1>
+                                                                                                                                                                                                                                                                                                  <p>Enter your Discord username below to proceed to payment.</p>
+
+                                                                                                                                                                                                                                                                                                      <input type="text" id="discord" placeholder="Discord username">
+                                                                                                                                                                                                                                                                                                          <button onclick="payNow()">Pay Now</button>
+
+                                                                                                                                                                                                                                                                                                              <div class="note">After payment, your Discord role will be assigned automatically.</div>
+                                                                                                                                                                                                                                                                                                                </div>
+
+                                                                                                                                                                                                                                                                                                                  <script>
+                                                                                                                                                                                                                                                                                                                      function payNow() {
+                                                                                                                                                                                                                                                                                                                            const username = document.getElementById("discord").value;
+                                                                                                                                                                                                                                                                                                                                  if (!username) {
+                                                                                                                                                                                                                                                                                                                                          alert("Please enter your Discord username!");
+                                                                                                                                                                                                                                                                                                                                                  return;
+                                                                                                                                                                                                                                                                                                                                                        }
+                                                                                                                                                                                                                                                                                                                                                              // Redirect to your backend with the Discord username
+                                                                                                                                                                                                                                                                                                                                                                    window.location.href = "https://discord-bot-helper--loyalmoderatorb.replit.app/create-checkout?user=" + encodeURIComponent(username);
+                                                                                                                                                                                                                                                                                                                                                                        }
+                                                                                                                                                                                                                                                                                                                                                                          </script>
+                                                                                                                                                                                                                                                                                                                                                                          </body>
+                                                                                                                                                                                                                                                                                                                                                                          </html>
